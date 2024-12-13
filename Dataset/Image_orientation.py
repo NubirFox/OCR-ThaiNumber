@@ -1,7 +1,7 @@
 import os 
 import cv2
 
-data = 'D:/test_Pro/OCR-ThaiNumber/Dataset/HandWrite'
+data = 'D:/test_Pro/OCR-ThaiNumber/Dataset/Film_Dataset'
 folders = os.listdir(data)
 print(folders)
 
@@ -18,7 +18,7 @@ def save(name,frame):
 				seg_x.append(i)
 				seg_y.append(j)
 
-	file_save = "Dataset/"+"HandWrite"+"/"+str(folder)+"/"+name
+	file_save = "Dataset/"+"Film_Dataset"+"/"+str(folder)+"/"+name
 	print(file_save+" save")
 	cv2.imwrite(file_save,frame[min(seg_x):max(seg_x),min(seg_y):max(seg_y)])
 
