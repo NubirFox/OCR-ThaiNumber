@@ -8,9 +8,8 @@ print(folders)
 images = []
 labels = []
 
-def save(name,frame,folders):
+def save(name,frame):
 	ret,thresh = cv2.threshold(frame,70,255,0)
-	# print(thresh)
 	seg_x = []
 	seg_y = []
 	for i in range(len(thresh[0])):
@@ -29,4 +28,4 @@ for folder in folders:
         image_path = os.path.join(folder_path, image_name)
         image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
         image = cv2.resize(image, (100, 100))
-        save(image_name,image,folders)
+        save(image_name,image)
