@@ -1,4 +1,7 @@
 ## OCR Thai Number
+  <img src="image/giff.gif" alt="Alt text" title="Optional title">
+  <br>
+  <br>
   This is an Optical Character Recognition (OCR) with a Convolutional Neural Network to predict Thai numeral handwriting. To conduct this project, handwriting was collected from students in the Faculty of Engineering, at Khon Kaen University.
   <br>
   <br>
@@ -19,5 +22,7 @@
   $ python app.py
   ```
   <br>
-  If there are no errors, the program will display this window.
-  ![Screenshot 2024-12-15 212817](https://github.com/user-attachments/assets/a8ac3aa3-ddf9-42a6-8bc2-c9154f2b5af0)
+  If there are no errors, the program will display this window.<br>
+   <img src="image/window.png" alt="Alt text" title="Optional title">
+
+
