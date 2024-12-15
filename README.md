@@ -5,7 +5,7 @@
   This is an Optical Character Recognition (OCR) with a Convolutional Neural Network to predict Thai numeral handwriting. To conduct this project, handwriting was collected from students in the Faculty of Engineering, at Khon Kaen University.
   <br>
   <br>
-  Thank you Dataset By -> Suriyachat Golf
+  Thank you Dataset By -> <a href="Image/suriyachat.jpg" target="_blank">Suriyachat Golf</a>
   <br>
   <br>
   If you'd like to use it, you should install this. <br>
@@ -15,8 +15,6 @@
   ```
 > [!IMPORTANT]
 > recommended to use Python 3.9._
-  <br>
-  <br>
   
   If you have everything installed, Open a file named app.py and run it.
   ```
