@@ -3,6 +3,9 @@
   <br>
   <br>
   If you'd like to use it, you should install this. <br>
-  ```    $ pip install -r requirements.txt                                    ```
+  ```
+  $ pip install -r requirements.txt
+  ```
+
 > [!IMPORTANT]
 > recommended to use Python 3.9._
