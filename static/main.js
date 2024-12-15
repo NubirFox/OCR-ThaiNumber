@@ -34,7 +34,7 @@ canvas.addEventListener('mousemove', draw);
 // ส่งภาพไปยัง Backend
 sendBtn.addEventListener('click', () => {
     const imageData = canvas.toDataURL(); // แปลงภาพใน canvas เป็น Base64
-    fetch('/process_image', {
+    fetch('https://api-sg8u.onrender.com', {
         method: 'POST',
         body: JSON.stringify({ image: imageData }),
         headers: { 'Content-Type': 'application/json' }
@@ -45,4 +45,3 @@ sendBtn.addEventListener('click', () => {
     })
     .catch(err => console.error(err));
 });
-s
