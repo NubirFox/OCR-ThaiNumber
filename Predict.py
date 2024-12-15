@@ -20,7 +20,7 @@ labels = dict((v,k) for k,v in labels.items())
 
 model = load_model('Model/OCR-number-TH.h5')
 
-img = cv2.imread("Dataset/Test_data/Test2/9.png")
+img = cv2.imread("Dataset/Test_data/Test2/5.png")
 img = cv2.resize(img, target_img_shape)
 img_array = img_to_array(img)
 img_array = np.expand_dims(img_array, axis=0)
@@ -29,3 +29,6 @@ img_array = preprocess_input(img_array)
 pred = model.predict(img_array)
 pred_cls = labels[np.argmax(pred, axis=-1)[0]]
 print("prediction: ", pred_cls)
+cv2.imshow(img)
+cv2.waitKey()
+cv2.destroyAllWindows()
