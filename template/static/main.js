@@ -19,25 +19,6 @@ function startPosition(e) {
 function endPosition() {
     painting = false;
     ctx.beginPath();
-}
-
-function draw(e) {
-    if (!painting) return;
-    ctx.lineWidth = 10;
-    ctx.lineCap = 'round';
-    ctx.strokeStyle = 'black';
-
-    ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
-}
-// Event listeners
-canvas.addEventListener('mousedown', startPosition);
-canvas.addEventListener('mouseup', endPosition);
-canvas.addEventListener('mousemove', draw);
-// ส่งภาพไปยัง Backend
-sendBtn.addEventListener('click', () => {
     const imageData = canvas.toDataURL('image/png');
 
     const byteString = atob(imageData.split(',')[1]);
@@ -67,4 +48,20 @@ sendBtn.addEventListener('click', () => {
         imageResultDiv.innerHTML = `<img src="data:image/png;base64,${processedImage}" />`;
     })
     .catch(err => console.error(err));
-});
+}
+
+function draw(e) {
+    if (!painting) return;
+    ctx.lineWidth = 10;
+    ctx.lineCap = 'round';
+    ctx.strokeStyle = 'black';
+
+    ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+}
+// Event listeners
+canvas.addEventListener('mousedown', startPosition);
+canvas.addEventListener('mouseup', endPosition);
+canvas.addEventListener('mousemove', draw);
