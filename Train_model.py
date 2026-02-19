@@ -66,6 +66,7 @@ for i in ids:
     print("{:>10} = {:.2f}".format(labels[i],val_count[i]/train_count[i]*100))
 print("")
 
+print(train_set[0][0].shape)
 input_shape = (target_img_shape[0],target_img_shape[1],3)
 
 model = Sequential()
@@ -85,7 +86,7 @@ model.add(Dense(nclass, activation="softmax"))
 print("Input_shape = ", input_shape)
 model.summary()
 model.compile(loss="categorical_crossentropy", optimizer="adam", metrics=["accuracy"])
-history = model.fit(train_set, validation_data=val_set, epochs=20, verbose=1)
+history = model.fit(train_set, validation_data=val_set, epochs=1, verbose=1)
 
 # model.save('Model/OCR-number-TH.h5')
 
